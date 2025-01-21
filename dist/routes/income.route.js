@@ -10,3 +10,4 @@ const incomeRouter = (0, express_1.Router)();
 incomeRouter.post("/income", passport_1.default.authenticate("jwt", { session: false }), income_controller_1.addIncome);
 incomeRouter.get("/income", passport_1.default.authenticate("jwt", { session: false }), income_controller_1.getIncomes);
 exports.default = incomeRouter;
+//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

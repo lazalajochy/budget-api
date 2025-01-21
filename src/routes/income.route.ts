@@ -8,3 +8,5 @@ incomeRouter.get("/income", passport.authenticate("jwt", {session:false}), getIn
 
 
 export default incomeRouter;
+
+//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
