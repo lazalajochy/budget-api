@@ -6,15 +6,11 @@ export const addIncome = async (req: Request, res: Response) => {
     try {
         const user:IUser = req.user as IUser;
         const {salary, job_title} = req.body;
-
-        console.log(user)
-
         const newIncome = new income({
             salary, 
             job_title,
             createdBy:user._id
         });
-
         await newIncome.save();
         res.status(201).json({msg: newIncome})
     } catch (error) {
