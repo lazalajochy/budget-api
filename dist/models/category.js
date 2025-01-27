@@ -6,8 +6,8 @@ const categorySchema = new mongoose_1.Schema({
         type: String,
         trim: true
     },
-    description: {
-        type: String,
+    amount: {
+        type: Number,
         trim: true
     },
     createdBy: {
