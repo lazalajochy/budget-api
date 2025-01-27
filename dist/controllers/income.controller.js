@@ -9,7 +9,6 @@ const addIncome = async (req, res) => {
     try {
         const user = req.user;
         const { salary, job_title } = req.body;
-        console.log(user);
         const newIncome = new income_1.default({
             salary,
             job_title,

@@ -4,6 +4,7 @@ import dotenv from "dotenv"
 import userRouter from "./routes/auth.routes";
 import passportMiddlewares from "./middlewares/passport";
 import passport from "passport";
+import cors from "cors";
 import categoryRouter from "./routes/category.routes";
 import incomeRouter from "./routes/income.route";
 
@@ -12,6 +13,10 @@ const app: Express  = express();
 app.set("port", process.env.PORT || 4500);
 app.use(morgan("dev"));
 app.use(express.urlencoded({extended:false}));
+app.use(cors({
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE"]
+}));
 app.use(express.json());
 app.use(passport.initialize());
 passport.use(passportMiddlewares)

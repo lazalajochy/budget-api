@@ -8,10 +8,10 @@ const category_1 = __importDefault(require("../models/category"));
 const addCategory = async (req, res) => {
     try {
         const user = req.user;
-        const { name, description } = req.body;
+        const { name, amount } = req.body;
         const newCategory = new category_1.default({
             name,
-            description,
+            amount,
             createdBy: user._id
         });
         await newCategory.save();

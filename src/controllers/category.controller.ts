@@ -6,11 +6,11 @@
     try {
 
         const user:IUser = req.user as IUser
-        const {name, description} = req.body;
+        const {name, amount} = req.body;
 
         const newCategory = new category({
             name,
-            description,
+            amount,
             createdBy:user._id
         });
 
