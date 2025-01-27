@@ -14,7 +14,7 @@ app.set("port", process.env.PORT || 4500);
 app.use(morgan("dev"));
 app.use(express.urlencoded({extended:false}));
 app.use(cors({
-    origin: "https://budget-app-lwgb.onrender.com",
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"]
 
