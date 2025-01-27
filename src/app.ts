@@ -15,7 +15,9 @@ app.use(morgan("dev"));
 app.use(express.urlencoded({extended:false}));
 app.use(cors({
     origin: "https://budget-app-lwgb.onrender.com/",
-    methods: ["GET", "POST", "PUT", "DELETE"]
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+
 }));
 app.use(express.json());
 app.use(passport.initialize());
