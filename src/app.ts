@@ -15,7 +15,7 @@ app.use(morgan("dev"));
 app.use(express.urlencoded({extended:false}));
 
 
-const allowedOrigins = ["https://budget-app-lwgb.onrender.com"];
+const allowedOrigins = [process.env.urlApp];
 
 app.use(cors({
     origin: function (origin, callback) {
