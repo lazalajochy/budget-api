@@ -18,8 +18,8 @@ app.set("port", process.env.PORT || 4500);
 app.use((0, morgan_1.default)("dev"));
 app.use(express_1.default.urlencoded({ extended: false }));
 app.use((0, cors_1.default)({
-    origin: "https://budget-app-lwgb.onrender.com/",
-    methods: ["GET", "POST", "PUT", "DELETE"]
+    origin: "https://budget-app-lwgb.onrender.com",
+    methods: ["GET", "POST", "PUT", "DELETE"],
 }));
 app.use(express_1.default.json());
 app.use(passport_2.default.initialize());
