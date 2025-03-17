@@ -3,7 +3,7 @@ name: Test Project
 on:
   pull_request:
   branches:
-  -  main
+  -  dev
 
 jobs:
   test:
@@ -17,6 +17,6 @@ jobs:
       - run: npm ci
       - run: run test
       - run: npm run build
-      
+
 
 
