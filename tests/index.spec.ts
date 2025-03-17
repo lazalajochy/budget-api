@@ -23,5 +23,4 @@ describe("Test Server", () => {
             "Database connected successfully",
         );
     });
-
 });
