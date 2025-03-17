@@ -15,7 +15,7 @@ app.use(morgan("dev"));
 app.use(express.urlencoded({extended:false}));
 
 
-const allowedOrigins = [process.env.urlApp];
+const allowedOrigins = [process.env.urlApp,"http://localhost:5173"];
 
 app.use(cors({
     origin: function (origin, callback) {
