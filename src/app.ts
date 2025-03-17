@@ -28,6 +28,7 @@ app.use(cors({
     methods: ["GET", "POST", "PUT", "DELETE"],
 }));
 
+console.log("test-test")
 app.use(express.json());
 app.use(passport.initialize());
 passport.use(passportMiddlewares)
